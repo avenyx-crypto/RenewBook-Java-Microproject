@@ -1,0 +1,682 @@
+/* =========================================
+   RENEWBOOK
+   MODERN MINIMALIST EDITORIAL
+   COLOR SYSTEM
+   ========================================= */
+
+:root {
+  --paper: #F5F2EB;
+  --beige: #E8E3D8;
+  --ink: #171717;
+  --charcoal: #555555;
+  --muted: #777777;
+  --border: #C9C4B9;
+  --dark-border: #4A4A4A;
+  --accent: #315C4A;
+  --accent-light: #DDE7E1;
+}
+
+
+/* =========================================
+   BASE
+   ========================================= */
+
+.home-page {
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+  min-height: 88vh;
+  padding: 110px 8% 80px;
+
+  display: flex;
+  align-items: center;
+
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+/* Small editorial label */
+
+.hero-tag {
+  margin: 0 0 35px;
+
+  color: var(--accent);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+
+/* Main headline */
+
+.hero h1 {
+  max-width: 1100px;
+
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(4rem, 8.5vw, 9rem);
+  line-height: 0.88;
+
+  font-weight: 500;
+
+  letter-spacing: -5px;
+}
+
+
+/* Italic editorial emphasis */
+
+.hero h1 span {
+  display: block;
+  color: var(--accent);
+  font-style: italic;
+}
+
+
+/* Description */
+
+.hero-description {
+  max-width: 650px;
+
+  margin: 45px 0 35px;
+
+  color: var(--charcoal);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button {
+  padding: 15px 24px;
+
+  border: 1px solid var(--ink);
+
+  background: var(--ink);
+  color: var(--paper);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  transform: translateY(-3px);
+
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+
+/* Secondary button */
+
+.hero-buttons .secondary-button {
+  background: transparent;
+  color: var(--ink);
+}
+
+.hero-buttons .secondary-button:hover {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+
+
+/* =========================================
+   GENERAL SECTION TITLE
+   ========================================= */
+
+.section-title {
+  margin-bottom: 65px;
+}
+
+.section-title p {
+  margin: 0 0 18px;
+
+  color: var(--accent);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+
+  font-weight: 500;
+
+  letter-spacing: -3px;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about-section {
+  padding: 120px 8%;
+
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+
+  gap: 80px;
+
+  background: var(--paper);
+
+  border-bottom: 1px solid var(--ink);
+}
+
+
+/* Small section number */
+
+.about-section::before {
+  content: "01";
+
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.about-content {
+  max-width: 800px;
+}
+
+.about-content p {
+  margin: 0 0 30px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.5rem, 2.4vw, 2.4rem);
+
+  line-height: 1.35;
+
+  color: #292929;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================
+   HOW IT WORKS
+   ========================================= */
+
+.how-section {
+  padding: 120px 8%;
+
+  background: var(--ink);
+  color: var(--paper);
+
+  border-bottom: 1px solid var(--ink);
+}
+
+.how-section .section-title p {
+  color: #9BB7A8;
+}
+
+.how-section .section-title h2 {
+  color: var(--paper);
+}
+
+
+/* Step grid */
+
+.steps-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--dark-border);
+}
+
+
+/* Individual step */
+
+.step-card {
+  padding: 30px 25px 30px 0;
+
+  border-right: 1px solid var(--dark-border);
+}
+
+.step-card:not(:first-child) {
+  padding-left: 25px;
+}
+
+.step-card:last-child {
+  border-right: none;
+}
+
+
+/* Number */
+
+.step-number {
+  margin-bottom: 70px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 48px;
+
+  color: #9BB7A8;
+}
+
+
+/* Heading */
+
+.step-card h3 {
+  margin: 0 0 18px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  color: var(--paper);
+}
+
+
+/* Description */
+
+.step-card p {
+  max-width: 240px;
+
+  margin: 0;
+
+  color: #B5B5B5;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   WHY RENEWBOOK
+   ========================================= */
+
+.why-section {
+  padding: 120px 8%;
+
+  background: var(--paper);
+
+  border-bottom: 1px solid var(--ink);
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid var(--ink);
+}
+
+
+/* Benefit card */
+
+.benefit-card {
+  padding: 35px 30px 30px 0;
+
+  border-right: 1px solid var(--ink);
+}
+
+.benefit-card:not(:first-child) {
+  padding-left: 30px;
+}
+
+.benefit-card:last-child {
+  border-right: none;
+}
+
+
+/* Benefit heading */
+
+.benefit-card h3 {
+  margin: 0 0 20px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 32px;
+
+  font-weight: 500;
+
+  color: var(--ink);
+}
+
+
+/* Benefit text */
+
+.benefit-card p {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: var(--charcoal);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CATEGORIES
+   ========================================= */
+
+.categories-section {
+  padding: 120px 8%;
+
+  background: var(--beige);
+
+  border-bottom: 1px solid var(--ink);
+}
+
+
+/* Category list */
+
+.category-container {
+  border-top: 1px solid var(--ink);
+}
+
+
+/* Individual category */
+
+.category-container div {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--ink);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(1.8rem, 3vw, 3.5rem);
+
+  color: var(--ink);
+
+  cursor: default;
+
+  transition:
+    padding 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* Arrow */
+
+.category-container div::after {
+  content: "↗";
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 22px;
+
+  color: var(--accent);
+
+  transition: transform 0.3s ease;
+}
+
+
+/* Hover */
+
+.category-container div:hover {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  color: var(--accent);
+}
+
+.category-container div:hover::after {
+  transform: translate(4px, -4px);
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  padding: 45px 8%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+
+  background: var(--ink);
+
+  color: var(--paper);
+}
+
+
+footer h2 {
+  margin: 0;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+}
+
+
+footer p {
+  margin: 0;
+
+  color: #AAAAAA;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+footer .copyright {
+  text-align: right;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 90px 6% 70px;
+  }
+
+  .about-section {
+    padding: 90px 6%;
+
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .how-section,
+  .why-section,
+  .categories-section {
+    padding: 90px 6%;
+  }
+
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .step-card {
+    border-bottom: 1px solid var(--dark-border);
+  }
+
+  .step-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .benefits-container {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card {
+    border-right: none;
+
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .benefit-card:last-child {
+    border-bottom: none;
+  }
+
+  footer {
+    padding: 40px 6%;
+
+    grid-template-columns: 1fr;
+  }
+
+  footer .copyright {
+    text-align: left;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 80vh;
+
+    padding: 70px 5% 55px;
+  }
+
+  .hero-tag {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.4rem, 16vw, 6rem);
+
+    letter-spacing: -3px;
+  }
+
+  .hero-description {
+    margin-top: 30px;
+
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .hero-buttons button {
+    width: auto;
+  }
+
+  .about-section,
+  .how-section,
+  .why-section,
+  .categories-section {
+    padding: 70px 5%;
+  }
+
+  .section-title {
+    margin-bottom: 45px;
+  }
+
+  .section-title h2 {
+    font-size: 3rem;
+
+    letter-spacing: -2px;
+  }
+
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card,
+  .step-card:not(:first-child) {
+    padding: 30px 0;
+
+    border-right: none;
+  }
+
+  .step-card:last-child {
+    border-bottom: none;
+  }
+
+  .step-number {
+    margin-bottom: 40px;
+  }
+
+  .benefit-card,
+  .benefit-card:not(:first-child) {
+    padding: 30px 0;
+  }
+
+  .category-container div {
+    font-size: 2rem;
+  }
+
+  footer {
+    padding: 35px 5%;
+  }
+}

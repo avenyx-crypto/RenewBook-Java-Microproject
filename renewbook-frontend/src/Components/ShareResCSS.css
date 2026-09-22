@@ -1,0 +1,322 @@
+/* =========================================
+   RENEWBOOK - SHARE RESOURCE
+   MODERN MINIMALIST EDITORIAL
+   ========================================= */
+
+
+/* =========================================
+   PAGE
+   ========================================= */
+
+.share-page {
+  min-height: calc(100vh - 70px);
+  padding: 70px 8% 90px;
+
+  background: #F5F2EB;
+  color: #171717;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   PAGE TITLE
+   ========================================= */
+
+.share-page h1 {
+  margin: 0 0 15px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-weight: 500;
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+  color: #171717;
+}
+
+
+/* Small label above heading */
+
+.share-page h1::before {
+  content: "SHARE A RESOURCE";
+
+  display: block;
+
+  margin-bottom: 22px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #315C4A;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.share-page > p {
+  max-width: 600px;
+
+  margin: 0 0 50px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #555555;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.share-page form {
+  max-width: 900px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 30px;
+  row-gap: 10px;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #C9C4B9;
+}
+
+
+/* =========================================
+   LABELS
+   ========================================= */
+
+.share-page form label {
+  margin-top: 15px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #171717;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.share-page form input,
+.share-page form select,
+.share-page form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #C9C4B9;
+
+  outline: none;
+
+  background: #E8E3D8;
+
+  color: #171717;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.share-page form input::placeholder,
+.share-page form textarea::placeholder {
+  color: #777777;
+}
+
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.share-page form input:focus,
+.share-page form select:focus,
+.share-page form textarea:focus {
+  border-color: #315C4A;
+
+  background: #F5F2EB;
+
+  box-shadow: 4px 4px 0 #DDE7E1;
+}
+
+
+/* =========================================
+   SELECT
+   ========================================= */
+
+.share-page form select {
+  cursor: pointer;
+}
+
+
+/* =========================================
+   DESCRIPTION TEXTAREA
+   ========================================= */
+
+.share-page form textarea {
+  min-height: 130px;
+
+  resize: vertical;
+
+  line-height: 1.6;
+}
+
+
+/* Make description full width */
+
+.share-page form label:nth-of-type(5),
+.share-page form textarea {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.share-page form button {
+  grid-column: 1 / -1;
+
+  justify-self: start;
+
+  margin-top: 20px;
+
+  padding: 15px 25px;
+
+  border: 1px solid #171717;
+
+  background: #171717;
+
+  color: #F5F2EB;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* Button hover */
+
+.share-page form button:hover {
+  background: #315C4A;
+
+  border-color: #315C4A;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .share-page {
+    padding: 60px 6% 75px;
+  }
+
+  .share-page form {
+    grid-template-columns: 1fr;
+  }
+
+  .share-page form label:nth-of-type(5),
+  .share-page form textarea,
+  .share-page form button {
+    grid-column: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .share-page {
+    min-height: calc(100vh - 70px);
+
+    padding: 50px 5% 60px;
+  }
+
+
+  .share-page h1 {
+    font-size: 3.4rem;
+
+    letter-spacing: -2px;
+  }
+
+
+  .share-page h1::before {
+    margin-bottom: 15px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .share-page > p {
+    margin-bottom: 35px;
+
+    font-size: 14px;
+  }
+
+
+  .share-page form {
+    padding-top: 25px;
+  }
+
+
+  .share-page form input,
+  .share-page form select,
+  .share-page form textarea {
+    padding: 13px;
+  }
+
+
+  .share-page form button {
+    width: 100%;
+
+    justify-self: stretch;
+  }
+}

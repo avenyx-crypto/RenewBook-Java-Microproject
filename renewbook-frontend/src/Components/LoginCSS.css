@@ -1,0 +1,252 @@
+/* =========================================
+   RENEWBOOK LOGIN
+   MODERN MINIMALIST EDITORIAL
+   ========================================= */
+
+.login-container {
+  min-height: calc(100vh - 75px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 70px 5%;
+
+  background: #F5F2EB;
+}
+
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.login-card {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 55px;
+
+  background: #F5F2EB;
+
+  border: 1px solid #C9C4B9;
+
+  box-shadow: 12px 12px 0 #E8E3D8;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.login-card h1 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(3rem, 6vw, 4.5rem);
+
+  line-height: 0.95;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+
+  color: #171717;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.login-card > p {
+  margin: 0 0 35px;
+
+  color: #555555;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.login-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+.login-card label {
+  margin-top: 8px;
+
+  color: #171717;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.login-card input {
+  width: 100%;
+
+  padding: 15px 14px;
+
+  border: 1px solid #C9C4B9;
+
+  outline: none;
+
+  background: #E8E3D8;
+
+  color: #171717;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 15px;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.login-card input::placeholder {
+  color: #777777;
+}
+
+
+.login-card input:focus {
+  border-color: #315C4A;
+
+  background: #F5F2EB;
+
+  box-shadow: 4px 4px 0 #DDE7E1;
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+   ========================================= */
+
+.login-card button {
+  margin-top: 18px;
+
+  padding: 16px 24px;
+
+  border: 1px solid #171717;
+
+  background: #171717;
+
+  color: #F5F2EB;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.login-card button:hover {
+  background: #315C4A;
+
+  border-color: #315C4A;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   REGISTER LINK
+   ========================================= */
+
+.login-card form + p {
+  margin-top: 30px;
+
+  margin-bottom: 0;
+
+  color: #555555;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+.login-card form + p a {
+  color: #315C4A;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #315C4A;
+
+  transition: opacity 0.3s ease;
+}
+
+
+.login-card form + p a:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .login-container {
+    min-height: calc(100vh - 120px);
+
+    padding: 45px 5%;
+  }
+
+  .login-card {
+    padding: 35px 25px;
+
+    box-shadow: 7px 7px 0 #E8E3D8;
+  }
+
+  .login-card h1 {
+    font-size: 3rem;
+  }
+
+  .login-card input {
+    padding: 14px 12px;
+  }
+
+  .login-card button {
+    width: 100%;
+  }
+}
